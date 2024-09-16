@@ -1,0 +1,48 @@
+networks:
+  monitoring:
+    driver: bridge
+
+services:
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus-custom-metrics
+    environment:
+      - TZ=America/Sao_Paulo
+    volumes:
+      - ./tools/telemetry/prometheus.yaml:/etc/prometheus/prometheus.yml
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--web.console.libraries=/etc/prometheus/console_libraries"
+      - "--web.console.templates=/etc/prometheus/consoles"
+      - "--web.enable-lifecycle"
+    ports:
+      - 9090:9090
+    networks:
+      - monitoring
+
+  grafana:
+    image: grafana/grafana-oss
+    container_name: grafana-custom-metrics
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - ./tools/telemetry/grafana_datasources.yaml:/etc/grafana/provisioning/datasources/all.yaml
+    ports:
+      - 3000:3000
+    networks:
+      - monitoring
+
+  custom-metrics-aspnetapp:
+    build:
+      context: ./CustomMetricsPOC
+    container_name: custom-metrics
+    # volumes:
+    #   - ./database:/app/database
+    ports:
+      - 8080:8080
+      - 8081:8081
+    networks:
+      - monitoring

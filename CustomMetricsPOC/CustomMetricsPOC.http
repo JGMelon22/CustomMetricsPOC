@@ -1,0 +1,6 @@
+@CustomMetricsPOC_HostAddress = http://localhost:5218
+
+GET {{CustomMetricsPOC_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
