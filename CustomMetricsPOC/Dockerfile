@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /source
 
-# Copy all files including Store.db
+# Copy all files
 COPY . ./CustomMetricsPOC
 WORKDIR /source/CustomMetricsPOC
 RUN dotnet restore
