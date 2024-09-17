@@ -49,6 +49,17 @@ public class OrdersController : ControllerBase
             : NotFound(order);
     }
 
+    [HttpGet("count")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public async Task<IActionResult> CountAllOrdersAsync()
+    {
+        var orders = await _repository.CountAllOrdersAsync();
+        return orders.Data >= 1
+            ? Ok(orders)
+            : NoContent();
+    }
+
     [HttpPatch("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

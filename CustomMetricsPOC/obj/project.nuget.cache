@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iPACNqtyLk0=",
+  "dgSpecHash": "WXNKWj05YaY=",
   "success": true,
-  "projectFilePath": "/home/joaog/Documents/TempCodes/CSharpBasics/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj",
+  "projectFilePath": "/home/joaog/Documents/Desenvolvimento/CSharp/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj",
   "expectedPackageFiles": [
     "/home/joaog/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/joaog/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

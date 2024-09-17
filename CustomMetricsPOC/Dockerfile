@@ -11,7 +11,7 @@ RUN dotnet restore
 RUN dotnet publish -c release -o /app --no-restore
 
 # Final Stage
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-bookworm-slim
 WORKDIR /app
 
 # Create Database directory

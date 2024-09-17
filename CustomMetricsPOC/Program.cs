@@ -3,6 +3,7 @@ using CustomMetricsPOC.Infrastructure.Data;
 using CustomMetricsPOC.Infrastructure.Repositories;
 using CustomMetricsPOC.Interfaces;
 using Prometheus;
+using CustomMetricsPOC.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlite(builder.Configuration.GetConnectionString("Default"));
 });
+
+builder.Services.AddSingleton<OrderMetricsService>();
+builder.Services.AddHostedService<MetricsBackgroundService>();
 
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/joaog/Documents/TempCodes/CSharpBasics/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj": {}
+    "/home/joaog/Documents/Desenvolvimento/CSharp/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj": {}
   },
   "projects": {
-    "/home/joaog/Documents/TempCodes/CSharpBasics/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj": {
+    "/home/joaog/Documents/Desenvolvimento/CSharp/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/joaog/Documents/TempCodes/CSharpBasics/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj",
+        "projectUniqueName": "/home/joaog/Documents/Desenvolvimento/CSharp/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj",
         "projectName": "CustomMetricsPOC",
-        "projectPath": "/home/joaog/Documents/TempCodes/CSharpBasics/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj",
+        "projectPath": "/home/joaog/Documents/Desenvolvimento/CSharp/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj",
         "packagesPath": "/home/joaog/.nuget/packages/",
-        "outputPath": "/home/joaog/Documents/TempCodes/CSharpBasics/CustomMetricsPOC/CustomMetricsPOC/obj/",
+        "outputPath": "/home/joaog/Documents/Desenvolvimento/CSharp/CustomMetricsPOC/CustomMetricsPOC/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/joaog/.nuget/NuGet/NuGet.Config"
@@ -20,7 +20,8 @@
           "net8.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.soclminer.com.br/nuget/": {}
         },
         "frameworks": {
           "net8.0": {
