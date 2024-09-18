@@ -28,5 +28,5 @@
 <img src="https://github.com/user-attachments/assets/df584da8-728d-481c-bfd5-50244f032347" width="900" height="auto">
 
 ### PS ⚠️
-<span>The final stage image uses the <code>bookworm-slim</code> tag, which is smaller but do not contais tzdata, resultin on lack of globalization.</span><br/>
-<span>That's why there is no data at <code>Start time of the process</code> painel.<span>
+<span>The final stage image uses the <code>bookworm-slim</code> tag, which is smaller but do not contains tzdata, resulting on lack of globalization.</span><br/>
+<span>That's why there is no data at <code>Start time of the process</code> panel.<span>
