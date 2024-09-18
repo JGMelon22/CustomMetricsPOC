@@ -26,7 +26,8 @@ public class OrderRepository : IOrderRepository
             {
                 ProductName = newOrder.ProductName,
                 Price = newOrder.Price,
-                Quantity = newOrder.Quantity
+                Quantity = newOrder.Quantity,
+                RegisteredDate = newOrder.RegisteredDate
             };
 
             await _dbContext.Orders.AddAsync(order);
@@ -37,7 +38,8 @@ public class OrderRepository : IOrderRepository
                 Id = order.Id,
                 ProductName = order.ProductName,
                 Price = order.Price,
-                Quantity = order.Quantity
+                Quantity = order.Quantity,
+                RegisteredDate = order.RegisteredDate
             };
 
             serviceResponse.Data = orderResult;
@@ -71,7 +73,8 @@ public class OrderRepository : IOrderRepository
                     Id = order.Id,
                     ProductName = order.ProductName,
                     Price = order.Price,
-                    Quantity = order.Quantity
+                    Quantity = order.Quantity,
+                    RegisteredDate = order.RegisteredDate
                 };
 
                 mappedOrders.Add(orderResult);
@@ -103,7 +106,8 @@ public class OrderRepository : IOrderRepository
                 Id = order.Id,
                 ProductName = order.ProductName,
                 Price = order.Price,
-                Quantity = order.Quantity
+                Quantity = order.Quantity,
+                RegisteredDate = order.RegisteredDate
             };
 
             serviceResponse.Data = orderResult;
@@ -152,6 +156,7 @@ public class OrderRepository : IOrderRepository
             order.ProductName = updatedOrder.ProductName;
             order.Price = updatedOrder.Price;
             order.Quantity = updatedOrder.Quantity;
+            order.RegisteredDate = updatedOrder.RegisteredDate;
 
             await _dbContext.SaveChangesAsync();
 
@@ -160,7 +165,8 @@ public class OrderRepository : IOrderRepository
                 Id = order.Id,
                 ProductName = order.ProductName,
                 Price = order.Price,
-                Quantity = order.Quantity
+                Quantity = order.Quantity,
+                RegisteredDate = order.RegisteredDate
             };
 
             serviceResponse.Data = orderResult;

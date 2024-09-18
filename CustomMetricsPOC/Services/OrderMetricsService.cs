@@ -16,9 +16,13 @@ public class OrderMetricsService
 
     public async Task UpdateOrderCountAsync()
     {
+        short amountOfDays = -10;
         try
         {
-            int amountOfOrders = await _dbContext.Orders.CountAsync();
+            int amountOfOrders = await _dbContext.Orders
+                .Where(x => x.RegisteredDate >= DateTime.Now.AddDays(amountOfDays))
+                .CountAsync();
+
             OrderGauge.Set(amountOfOrders);
         }
         catch (Exception ex)

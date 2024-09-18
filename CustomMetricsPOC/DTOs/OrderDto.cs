@@ -14,5 +14,9 @@ public record OrderDto(
 
     [Required(ErrorMessage = "Product Quantity is a required field!")]
     [Range(0, int.MaxValue, ErrorMessage = "Product Quantity must be greater than 0!")]
-    int Quantity
+    int Quantity,
+
+    [Required(ErrorMessage = "Product Resgistered Date is a required field!")]
+    [DataType(DataType.Date, ErrorMessage = "Product Resgistered Date must follow the YYYY-MM-DD convention")]
+    DateTime RegisteredDate
 );

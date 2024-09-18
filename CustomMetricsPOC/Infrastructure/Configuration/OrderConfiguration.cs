@@ -37,5 +37,10 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
             .HasColumnType("INTEGER")
             .HasColumnName("quantity")
             .IsRequired();
+
+        builder.Property(o => o.RegisteredDate)
+            .HasColumnType("TEXT")
+            .HasColumnName("registered_date")
+            .IsRequired();
     }
 }

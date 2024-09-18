@@ -6,4 +6,5 @@ public record OrderResult
     public string ProductName { get; init; } = string.Empty!;
     public decimal Price { get; init; }
     public int Quantity { get; init; }
+    public DateTime RegisteredDate { get; init; }
 }
