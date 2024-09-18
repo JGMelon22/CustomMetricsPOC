@@ -23,7 +23,7 @@
 
 ### Custom dashboard
 <span>Please download the custom dashboard.</span> <br/>
-<span>You need to change the stat panel to the following metric and label filter: <code>total_order_count </code> and <code>job = csharp-app</code></span>
+<span>You need to change the stat panel to the following metric and label filter: <code>total_order_count </code> and <code>job = csharp-app</code></span><br/><br/>
 <img src="https://github.com/user-attachments/assets/1a067837-4c93-4c43-8712-3509f468b405" width="700" height="auto">
 <img src="https://github.com/user-attachments/assets/df584da8-728d-481c-bfd5-50244f032347" width="900" height="auto">
 
