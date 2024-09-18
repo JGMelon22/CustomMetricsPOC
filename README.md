@@ -1,6 +1,6 @@
 # CustomMetricsPOC
 <span>This is a sample dockerized web API CRUD as a sole purpose to be a start point to work with Prometheus custom metrics and Grafana.</span>
-<span>What actually was done? It was created a custom gauge metric to scrape orders from database using a background job to keep constantly up to date.</span>
+<span>What actually was done? It was created a custom gauge metric to scrape amount of orders from the last 10 days from database using a background job to keep constantly up to date.</span>
 
 ### Tech Stacks
 <ul>
@@ -25,7 +25,7 @@
 <span>Please download the custom dashboard.</span> <br/>
 <span>You need to change the stat panel to the following metric and label filter: <code>total_order_count </code> and <code>job = csharp-app</code></span><br/><br/>
 <img src="https://github.com/user-attachments/assets/1a067837-4c93-4c43-8712-3509f468b405" width="700" height="auto">
-<img src="https://github.com/user-attachments/assets/df584da8-728d-481c-bfd5-50244f032347" width="900" height="auto">
+<img src="https://github.com/user-attachments/assets/36b97b52-4df1-44c4-a1d7-976e97d2d4c0" width="900" height="auto">
 
 ### PS ⚠️
 <span>The final stage image uses the <code>bookworm-slim</code> tag, which is smaller but do not contains tzdata, resulting on lack of globalization.</span><br/>
