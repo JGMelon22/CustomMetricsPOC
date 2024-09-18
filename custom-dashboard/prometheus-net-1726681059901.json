@@ -888,7 +888,7 @@
       "type": "stat"
     }
   ],
-  "refresh": "5s",
+  "refresh": "10s",
   "schemaVersion": 39,
   "tags": [
     "prometheus-net",
@@ -1033,6 +1033,6 @@
   "timezone": "",
   "title": "prometheus-net",
   "uid": "zyAf4i4Zz",
-  "version": 4,
+  "version": 2,
   "weekStart": ""
 }
