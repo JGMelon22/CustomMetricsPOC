@@ -122,6 +122,7 @@
     },
     {
       "datasource": {
+        "default": false,
         "type": "prometheus",
         "uid": "P1809F7CD0C75ACF3"
       },
@@ -214,10 +215,12 @@
             "type": "prometheus",
             "uid": "P1809F7CD0C75ACF3"
           },
+          "editorMode": "code",
           "expr": "http_requests_in_progress",
           "format": "time_series",
           "intervalFactor": 1,
-          "legendFormat": "{{job}}",
+          "legendFormat": "{{method}} - {{endpoint}}",
+          "range": true,
           "refId": "A"
         }
       ],
@@ -1003,7 +1006,7 @@
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {
@@ -1034,6 +1037,6 @@
   "timezone": "",
   "title": "prometheus-net",
   "uid": "zyAf4i4Zz",
-  "version": 2,
+  "version": 3,
   "weekStart": ""
 }
