@@ -822,7 +822,8 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "thresholds"
+            "fixedColor": "blue",
+            "mode": "fixed"
           },
           "mappings": [],
           "thresholds": {
@@ -884,7 +885,7 @@
           "useBackend": false
         }
       ],
-      "title": "Amount of Orders",
+      "title": "Amount of Orders ",
       "type": "stat"
     }
   ],
@@ -1002,7 +1003,7 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
