@@ -818,7 +818,7 @@
     },
     {
       "datasource": {
-        "default": true,
+        "default": false,
         "type": "prometheus",
         "uid": "P1809F7CD0C75ACF3"
       },
@@ -827,6 +827,13 @@
           "color": {
             "fixedColor": "blue",
             "mode": "fixed"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
           },
           "mappings": [],
           "thresholds": {
@@ -853,21 +860,18 @@
       },
       "id": 21,
       "options": {
-        "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "enablePagination": true,
           "fields": "",
-          "values": false
+          "reducer": [
+            "sum"
+          ],
+          "show": false
         },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
+        "frameIndex": 1,
+        "showHeader": true
       },
       "pluginVersion": "11.2.0",
       "targets": [
@@ -877,19 +881,49 @@
             "uid": "P1809F7CD0C75ACF3"
           },
           "disableTextWrap": false,
-          "editorMode": "builder",
-          "expr": "total_orders_count{job=\"csharp-app\"}",
+          "editorMode": "code",
+          "expr": "product_orders",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
           "instant": false,
-          "legendFormat": "__auto",
+          "legendFormat": "{{product_name}}",
           "range": true,
           "refId": "A",
           "useBackend": false
         }
       ],
       "title": "Amount of Orders ",
-      "type": "stat"
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "labelsToFields": true,
+            "reducers": [
+              "max"
+            ]
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Field": true,
+              "__name__": true,
+              "instance": true,
+              "job": true,
+              "product_name": false
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Field": "",
+              "Max": "Amount ",
+              "product_name": "Product Name"
+            }
+          }
+        }
+      ],
+      "type": "table"
     }
   ],
   "refresh": "10s",
@@ -1037,6 +1071,6 @@
   "timezone": "",
   "title": "prometheus-net",
   "uid": "zyAf4i4Zz",
-  "version": 3,
+  "version": 8,
   "weekStart": ""
 }
