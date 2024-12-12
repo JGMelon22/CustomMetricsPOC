@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/joaog/Documents/TempCodes/CSharpBasics/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj": {}
+    "/home/joaog/Documents/TempCodes/WebApi/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj": {}
   },
   "projects": {
-    "/home/joaog/Documents/TempCodes/CSharpBasics/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj": {
+    "/home/joaog/Documents/TempCodes/WebApi/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/joaog/Documents/TempCodes/CSharpBasics/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj",
+        "projectUniqueName": "/home/joaog/Documents/TempCodes/WebApi/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj",
         "projectName": "CustomMetricsPOC",
-        "projectPath": "/home/joaog/Documents/TempCodes/CSharpBasics/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj",
+        "projectPath": "/home/joaog/Documents/TempCodes/WebApi/CustomMetricsPOC/CustomMetricsPOC/CustomMetricsPOC.csproj",
         "packagesPath": "/home/joaog/.nuget/packages/",
-        "outputPath": "/home/joaog/Documents/TempCodes/CSharpBasics/CustomMetricsPOC/CustomMetricsPOC/obj/",
+        "outputPath": "/home/joaog/Documents/TempCodes/WebApi/CustomMetricsPOC/CustomMetricsPOC/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/joaog/.nuget/NuGet/NuGet.Config"
@@ -45,21 +45,21 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[8.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[8.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[8.0.11, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.7.3, )"
+              "version": "[7.2.0, )"
             },
             "prometheus-net": {
               "target": "Package",
